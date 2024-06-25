@@ -55,11 +55,22 @@ class Soundboard extends Client {
                     .setDescription(props.slashCommandOptions.description)
                     if(props.slashCommandOptions.options.length > 0) {
                         props.slashCommandOptions.options.forEach(opt => {
-                            if(opt.type == "string") slashCmd.addStringOption(option =>
-                                option.setName(opt.name)
-                                .setDescription(opt.description)
-                                .setRequired(opt.required)
-                            );
+                            if(opt.type == "string") {
+                                if(opt.choices) {
+                                    slashCmd.addStringOption(option =>
+                                        option.setName(opt.name)
+                                        .setDescription(opt.description)
+                                        .setRequired(opt.required)
+                                        .addChoices(opt.choices)
+                                    );
+                                } else {
+                                    slashCmd.addStringOption(option =>
+                                        option.setName(opt.name)
+                                        .setDescription(opt.description)
+                                        .setRequired(opt.required)
+                                    );
+                                }
+                            }
                         });
                     }
                     this.slashCmds.push(slashCmd);
