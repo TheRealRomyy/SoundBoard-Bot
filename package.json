@@ -1,0 +1,24 @@
+{
+  "name": "soundboard",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Romy",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@discordjs/builders": "^1.8.2",
+    "@discordjs/opus": "^0.9.0",
+    "@discordjs/voice": "^0.17.0",
+    "chalk": "^4.1.2",
+    "child_process": "^1.0.2",
+    "discord.js": "^14.15.3",
+    "ffmpeg-static": "^5.2.0",
+    "fs": "^0.0.1-security",
+    "libsodium-wrappers": "^0.7.13",
+    "nekos.life": "^3.0.0",
+    "util": "^0.12.5"
+  }
+}
