@@ -20,6 +20,7 @@ class Soundboard extends Client {
         this.cooldowns = new Collection();
         this.cmds = new Collection;
         this.aliases = new Collection();
+        this.snipe = new Collection();
         this.slashCmds = new Array();
 
         // Import
