@@ -51,6 +51,9 @@ module.exports = class MessageCreate {
 
         // Try to run command
         if(cmd) {
+            // Warn about s!command validity
+            message.channel.send(`${emojis.warn} | Utilise des **/** commandes plutot : \`/${cmdName}${args.length > 0 ? " " + args : ""}\``);
+
             // Ensure that the command is enabled
             if(!cmd.settings.enabled) return message.reply(`${emojis.error} \`La commande est désactivée :/\``);
 
