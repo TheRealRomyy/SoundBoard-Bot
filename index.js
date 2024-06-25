@@ -70,6 +70,12 @@ class Soundboard extends Client {
                                         .setRequired(opt.required)
                                     );
                                 }
+                            } else if(opt.type == "user") {
+                                slashCmd.addUserOption(option =>
+                                    option.setName(opt.name)
+                                    .setDescription(opt.description)
+                                    .setRequired(opt.required)
+                                );
                             }
                         });
                     }

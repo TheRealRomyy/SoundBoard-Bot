@@ -1,3 +1,5 @@
+const moment = require("moment");
+
 module.exports = {
     convertMS(ms) {
 
@@ -42,6 +44,12 @@ module.exports = {
         if (absoluteTime.length === 0) absoluteTime.push(ams);
     
         return absoluteTime.join(", ");
-    }
+    },
+
+    printDateFrom(date){
+		locale = "fr-FR"
+		moment.locale("fr");
+		return moment.utc(date).startOf('hour').fromNow();
+	},
 }
 

@@ -23,7 +23,7 @@ module.exports = class Snipe extends Command {
         if(!snipe) return message.reply(`${client.emojiList.error} \`J'ai pas la ref la :/\``);
 
         const embed = new EmbedBuilder()
-        .setFooter({text:"Snipe"})
+        .setFooter({text:"Snipe | Soundboard - Bot"})
         .setColor("#2f3136")
         .setAuthor({name: snipe.user.username, iconURL: snipe.user.displayAvatarURL({ dynamic:true })})
         .setDescription(snipe.text.length > 0 ? snipe.text : `${client.emojiList.dnd} Y'a pas de texte`)

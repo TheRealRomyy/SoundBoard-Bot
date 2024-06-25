@@ -4,5 +4,17 @@
   "idle": "<:idle:1255140074752839773>",
   "dnd": "<:dnd:1255140076313247876>",
   "voice": ":loud_sound:",
-  "warn": "<:warn:1255165108967964763>"
+  "warn": "<:warn:1255165108967964763>",
+  "badges": {
+    "HypeSquadOnlineHouse3": "<:balance:1255241006467780618>",
+    "HypeSquadOnlineHouse1": "<:bravery:1255240742813696091>",
+    "HypeSquadOnlineHouse2": "<:brilliance:1255240745271431239>",
+    "VerifiedDeveloper": "<:early_dev:1255240746513072152>",
+    "Nitro": "<:nitro:1255241737614393344>",
+    "Booster": "<:boost:1255242719438045227>"
+  },
+  "id": "<:id:1255246016286818354>",
+  "success": "<:success:1255246917450076231>",
+  "up": "<:up:1255247568338686034>",
+  "roleList": "<:roleList:1255248333375541308>"
 }

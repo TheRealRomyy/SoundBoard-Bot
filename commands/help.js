@@ -23,7 +23,8 @@ module.exports = class Help extends Command {
         const embed = new EmbedBuilder()
         .setTitle(`Page d'aide de ${client.user.username}`)
         .setFooter({"text":"By Romyy"})
-        .addFields({name:`🎵・Soundboards (${client.sics.size})`, value: Array.from(client.sics).map(cmd => "\`" + cmd[0] + "\`").join(", "), inline:true})
+        .addFields({name:`🎵・Soundboards (${client.sics.size})`, value: Array.from(client.sics).map(cmd => "\`" + cmd[0] + "\`").join(", "), inline:false})
+        .addFields({name:`⚙️・Commands (${client.cmds.size})`, value: Array.from(client.cmds).map(cmd => "\`" + cmd[0] + "\`").join(", "), inline:false})
         .setColor(0x0099FF)
 
         message.reply({ 
