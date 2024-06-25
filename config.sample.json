@@ -1,5 +1,6 @@
 {
     "token": "TOK3N",
     "prefix": "s!",
-    "owner": ["OWNER ID"]
+    "owner": ["OWNER ID"],
+    "botId": "BOT ID"
 }

@@ -32,7 +32,7 @@ module.exports = class MessageCreate {
         };
 
         //@Soundboard - Bot
-        if(message.content === "<@827998192632856577>") message.reply(`Yep ? P'tit ping de **${client.ws.ping} ms**`);
+        if(message.content === `<@${client.cfg.botId}>`) message.reply(`Yep ? P'tit ping de **${client.ws.ping} ms**`);
 
         // Check if message is a command
         const prefix = client.cfg.prefix;
