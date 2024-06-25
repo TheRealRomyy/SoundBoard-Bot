@@ -2,5 +2,6 @@
     "token": "TOK3N",
     "prefix": "s!",
     "owner": ["OWNER ID"],
-    "botId": "BOT ID"
+    "botId": "BOT ID",
+    "mainGuildIdea": "MAIN GUILD IDEA"
 }

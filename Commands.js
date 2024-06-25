@@ -12,7 +12,6 @@ module.exports = class Command {
 		this.settings = { enabled, userPerms, restriction};
 		this.help = { name, aliases };
 		this.slashCommandOptions = slashCommandOptions && {
-            name,
             options: slashCommandOptions.options || [],
             description: slashCommandOptions.description
         };

@@ -33,6 +33,6 @@ module.exports = class Leave extends Command {
             else message.guild.members.cache.get(client.user.id).voice.disconnect();
             
             return message.reply(`${emojis.dnd} \`Allez, des gros bisous !\``)
-        } else return message.reply(`${emojis.idle} \`J'suis pas connecté mon chleb !\``)
+        } else return message.reply({content:`${emojis.idle} \`J'suis pas connecté mon chleb !\``});
     }
 }

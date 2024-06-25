@@ -18,7 +18,6 @@ module.exports = class Waifu extends Command {
     }
 
     async run(message, args) {
-
         const img = await neko.waifu();
         await message.reply("Roaar " + img.url);
     }

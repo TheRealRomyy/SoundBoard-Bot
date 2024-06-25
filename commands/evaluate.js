@@ -11,7 +11,15 @@ module.exports = class Evaluate extends Command {
             userPerms: [],
             restriction: ["OWNER"],
             slashCommandOptions: {
-                description: "(Romy) executer du code javascript"
+                description: "(Romy) executer du code javascript",
+                options: [
+                    {
+                        type: "string",
+                        required: true,
+                        description: "code js",
+                        name: "code"
+                    }
+                ]
             }
         })
     }
@@ -39,6 +47,34 @@ module.exports = class Evaluate extends Command {
         }).catch((err) => {
             err = err.toString();
             message.channel.send({
+                content: codeBlock("js", err)
+            });
+        });
+    }
+
+    async runInteraction(interaction) {
+
+        // Introducing constants
+        const client = this.client;
+        const emojis = client.emojiList;
+
+        // Check if there is args
+        const content = interaction.options.getString("code");
+        if(!content) return interaction.reply(`${emojis.error} Usage: \`${client.cfg.prefix}eval <content>\``);
+
+        // Resolve js code
+        const result = new Promise((resolve, reject) => resolve(eval(content)));
+        return result.then(async (output) => {
+            if(typeof output !== "string") output = require("util").inspect(output, { depth: 0 });
+
+            if(output.length >= 2000) return interaction.reply(`${emojis.error} Trop grand mon chleb`);
+    
+            interaction.reply({
+                content: codeBlock("js", output)
+            });
+        }).catch((err) => {
+            err = err.toString();
+            interaction.reply({
                 content: codeBlock("js", err)
             });
         });
