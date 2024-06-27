@@ -14,6 +14,7 @@ class Soundboard extends Client {
         // Settings
         this.player = createAudioPlayer();
         this.cooldownTime = 2000;
+        this.lastError = null;
 
         // All Collections & arrays
         this.sics = new Collection();
